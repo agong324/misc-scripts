@@ -1,4 +1,6 @@
 # this is made for setting up persistent commands and aliases on Unraid, where it should append to /etc/profile 
+# download this file to /boot/go on the Unraid boot drive and add the following to /boot/config/go to apply the following on boot:
+# cat /boot/config/persistent-commands >> /etc/profile
 
 # change directory and if successful, immediately run ls -la 
 cdls() { cd "$@" && ls -la; }
