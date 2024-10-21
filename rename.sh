@@ -3,8 +3,13 @@
 # made to rename files according to the jellyfins episode naming scheme of Series Name A S01E01.mkv et cetera. change Name to the series name.
 #or just use this to rename files in general.
 read -p "Enter the Show's Name: " n
-read -p "Enter the Season Number: " m
-read -p "Enter the Starting Episode Number: " a
+read -p "Enter the Season Number: (default=1)" m
+read -p "Enter the Starting Episode Number: (default=1)" a
+
+# setting default values if no input was provided
+n=${n:-"Undefined"}
+m=${m:-"1"}
+a=${a:-"1"}
 
 for i in *.mkv; do
   if [ "$a" -lt 10 ]; then
