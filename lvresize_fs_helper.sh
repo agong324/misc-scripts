@@ -12,6 +12,8 @@
 # along with this program; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
+#this script is required if lvresize prompts an error about lvresize_fs_helper missing. Just wget it from this page to /usr/libexec/lvresize_fs_helper and give it executable permission
+
 errorexit() {
 	echo "$1" >&2
 	exit 1
